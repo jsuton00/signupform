@@ -1,0 +1,157 @@
+@import './abstract/mixins';
+@import './base/colours';
+@import './base/typography';
+
+body {
+  @include background(
+    url(../../multimedia/img/bg-intro-desktop.png),
+    $red,
+    center center,
+    no-repeat,
+    cover
+  );
+  font-family: $poppins;
+  font-size: 1rem;
+}
+
+.container {
+  @include size(100%, null);
+  @include spacing(0.5em, null);
+  &-fluid {
+    @include spacing(0.5em, null);
+  }
+}
+
+.row {
+  @include spacing(0.75em 1em, 0 auto);
+}
+
+.centred {
+  @include element-align(null, center, center, null, null);
+}
+
+.header-content {
+  @include spacing(1em, null);
+  @include element-align(null, center, flex-start, null, null);
+  &-text {
+    @include size(100%, 100%);
+    @include spacing(0.5em, null);
+    @include element-align(flex, space-around, null, null, 1.5);
+    flex-direction: column;
+    color: white;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: $poppins-bold;
+      @include spacing(null, 0.5em 0);
+      text-size-adjust: auto;
+    }
+
+    p {
+      font-weight: $poppins-normal;
+      text-size-adjust: auto;
+    }
+  }
+}
+
+.freeTrial {
+  &-section {
+    @include spacing(2em 1em, null);
+    @include element-align(null, space-around, center, null, 1.5);
+  }
+  &-tag {
+    @include size(100%, null);
+    @include spacing(1em 2.5em, 0.5em 0);
+    @include element-align(null, center, center, center, null);
+    @include background(null, $blue, null, null, null);
+    border: 1px solid $blue;
+    border-radius: 3%;
+    box-shadow: 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
+    color: white;
+
+    span {
+      @include element-align(inline-block, null, null, null, null);
+      font-weight: $poppins-semi-bold;
+      @include spacing(0.0625em, 0.0625em);
+    }
+  }
+  &-form {
+    @include flex(column, wrap);
+    @include size(100%, 100%);
+    @include element-align(null, space-around, null, null, 1.5);
+    @include spacing(1em 1.5em, 0 auto);
+    border: 1px solid white;
+    @include background(null, white, null, null, null);
+    border-radius: 2%;
+    box-shadow: 0.3125em 0.75em 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.inputField,
+.btnField {
+  @include spacing(0.0625em 0.125em, 0.25em 0);
+  input {
+    @include size(100%, null);
+    @include spacing(1em 1.25em, null);
+    &::placeholder {
+      font-weight: $poppins-bold;
+    }
+    &:focus {
+      border: 0.0625em solid $darkBlue;
+      box-shadow: none;
+    }
+  }
+
+  button {
+    @include size(100%, null);
+    @include spacing(1em 2em, 0.5em 0);
+    @include element-align(block, null, null, center, 90%);
+    @include background(null, $green, null, null, null);
+    border: 1px solid $green;
+    border-radius: 3%;
+    color: white;
+    font-weight: $poppins-semi-bold;
+    text-transform: uppercase;
+  }
+
+  p {
+    @include size(100%, 100%);
+    @include spacing(0.5em 0, 0.25em auto);
+    font-size: 0.75rem;
+    font-weight: $poppins-semi-bold;
+    @include element-align(block, null, null, center, 90%);
+    text-size-adjust: auto;
+
+    a {
+      color: $red;
+      font-weight: $poppins-medium;
+      &:hover {
+        color: $blue;
+        text-decoration: none;
+      }
+      &:visited {
+        color: $darkBlue;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.attribution {
+  @include size(100%, null);
+  @include spacing(0.25em 0.5em, 0 auto);
+  @include element-align(block, null, null, center, null);
+  color: white;
+  text-size-adjust: auto;
+  a {
+    color: white;
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $darkBlue;
+      text-decoration: none;
+    }
+  }
+}

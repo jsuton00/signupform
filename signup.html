@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./multimedia/img/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/css/style.css" />
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <div id="app" class="container container-fluid">
+      <div class="row centred">
+        <div class="col-xs-12 col-lg-6 col-xl-6 header-content">
+          <div id="title" class="header-content-text">
+            <h1>
+              Learn to code by watching others
+            </h1>
+            <p>
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-6 col-xl-6 freeTrial-section">
+          <div class="freeTrial-tag">
+            <span>Try it free 7 days</span>then $20/mo. thereafter
+          </div>
+          <form
+            id="freeTrialForm"
+            name="freeTrialForm"
+            class="freeTrial-form"
+            enctype="multipart/form-data"
+            autocomplete="on"
+            novalidate
+          >
+            <div class="form-row col-12 inputField">
+              <input
+                id="firstName"
+                name="firstName"
+                class="form-control"
+                type="text"
+                placeholder="First Name"
+                required
+              />
+              <div id="firstNameError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-row col-12 inputField">
+              <input
+                id="lastName"
+                name="lastName"
+                class="form-control"
+                type="text"
+                placeholder="Last Name"
+                required
+              />
+              <div id="lastNameError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-row col-12 inputField">
+              <input
+                id="emailAddress"
+                name="emailAddress"
+                class="form-control"
+                type="email"
+                pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+                placeholder="Email"
+                required
+              />
+              <div id="emailError" class="invalid-feedback"></div>
+            </div>
+            <div class="form-row col-12 inputField">
+              <input
+                id="passwordInput"
+                name="passwordInput"
+                class="form-control"
+                type="password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
+                placeholder="Password"
+                required
+              />
+              <div id="passwordError" class="invalid-feedback"></div>
+            </div>
+            <div id="btnField" class="form-row col-12 btnField">
+              <button
+                id="btnSignUp"
+                name="btnSignUp"
+                type="submit"
+                value="Claim your free trial"
+              >
+                Claim your free trial
+              </button>
+              <p>
+                By clicking the button, you are agreeing to our
+                <a href="#" target="_blank">Terms and Services</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/validateForm.js"></script>
+  </body>
+</html>
